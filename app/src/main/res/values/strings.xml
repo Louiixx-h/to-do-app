@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">To Do App</string>
+    <string name="add_button">Add button</string>
+    <string name="tasks_label">Tasks</string>
+    <string name="search_tasks">Search tasks</string>
+    <string name="sort_tasks">Sort tasks</string>
+    <string name="delete_all">Delete all</string>
+    <string name="close_button">Close Button</string>
+</resources>
