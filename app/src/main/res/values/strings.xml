@@ -6,4 +6,23 @@
     <string name="sort_tasks">Sort tasks</string>
     <string name="delete_all">Delete all</string>
     <string name="close_button">Close Button</string>
+    <string name="close_icon">Close Icon</string>
+    <string name="close_delete">Delete Icon</string>
+    <string name="close_update">Update Icon</string>
+    <string name="search_icon">Search icon</string>
+    <string name="search_hint">Search</string>
+    <string name="empty_icon">Empty icon</string>
+    <string name="no_tasks_found">No tasks found!</string>
+    <string name="add_task">Add Task</string>
+    <string name="back_arrow">Back arrow</string>
+    <string name="drop_down_arrow">Drop down arrow</string>
+    <string name="task_title_label">Title</string>
+    <string name="task_description_label">Description</string>
+    <string name="fields_are_empty_label">Fields are empty!</string>
+    <string name="yes_label">Yes</string>
+    <string name="no_label">No</string>
+    <string name="delete_task">Remove \'%1$s\'?</string>
+    <string name="delete_task_confirmation">Are you sure you want remove \'%1$s\'?</string>
+    <string name="delete_all_task">Remove all tasks?</string>
+    <string name="delete_all_task_confirmation">Are you sure you want remove all tasks? There is no going back after this action.</string>
 </resources>

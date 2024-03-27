@@ -54,6 +54,8 @@ android {
 
 dependencies {
     kapt(libs.com.google.dagger.hilt.android.compiler)
+    kapt(libs.androidx.room.room.compiler)
+    annotationProcessor(libs.androidx.room.room.compiler)
     implementation(libs.androidx.navigation.navigation.compose)
     implementation(libs.com.google.dagger.hilt.android)
     implementation(libs.androidx.datastore.datastore.preferences)

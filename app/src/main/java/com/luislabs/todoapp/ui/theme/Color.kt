@@ -16,13 +16,25 @@ val Pink40 = Color(0xFF7D5260)
 
 val LightWhite = Color(0xFFF2F2F2)
 val LightGray = Color(0xFFFCFCFC)
-val mediumGray = Color(0xFF9C9C9C)
+val MediumGray = Color(0xFF9C9C9C)
 val DarkGray = Color(0xFF141414)
 
 val LowPriorityColor = Color(0xFF00C980)
 val MediumPriorityColor = Color(0xFFFFC114)
 val HighPriorityColor = Color(0xFFEB5757)
 val NonePriorityColor = Color(0xFFBDBDBD)
+
+val ColorScheme.taskItemTitleColor: Color
+    @Composable
+    get(): Color {
+        return if (MaterialTheme.colorScheme.isLight()) DarkGray else DarkGray
+    }
+
+val ColorScheme.taskItemBackground: Color
+    @Composable
+    get(): Color {
+        return if (MaterialTheme.colorScheme.isLight()) Purple80 else PurpleGrey80
+    }
 
 val ColorScheme.appBarContentColor: Color
     @Composable

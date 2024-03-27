@@ -23,8 +23,8 @@ object DatabaseModule {
     ): ToDoDatabase {
         return Room.databaseBuilder(
             context = context,
-            ToDoDatabase::class.java,
-            Constants.DATABASE_NAME
+            klass = ToDoDatabase::class.java,
+            name = Constants.DATABASE_NAME
         ).build()
     }
 
