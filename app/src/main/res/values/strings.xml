@@ -21,6 +21,7 @@
     <string name="fields_are_empty_label">Fields are empty!</string>
     <string name="yes_label">Yes</string>
     <string name="no_label">No</string>
+    <string name="delete_task_description">Remove task</string>
     <string name="delete_task">Remove \'%1$s\'?</string>
     <string name="delete_task_confirmation">Are you sure you want remove \'%1$s\'?</string>
     <string name="delete_all_task">Remove all tasks?</string>

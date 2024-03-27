@@ -19,7 +19,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.luislabs.todoapp.R
-import com.luislabs.todoapp.data.models.ToDoTask
 import com.luislabs.todoapp.ui.theme.fabIconColor
 import com.luislabs.todoapp.ui.viewmodels.SharedViewModel
 import com.luislabs.todoapp.util.Action

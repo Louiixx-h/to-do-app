@@ -90,28 +90,26 @@ fun DisplayTasks(
     LazyColumn(modifier = modifier) {
         items(
             items = tasks,
-            key = { tasks ->
-                tasks.id
-            }
+            key = { task -> task.id }
         ) { task ->
-            val dismissState = rememberSwipeToDismissBoxState()
+            val swipeState = rememberSwipeToDismissBoxState()
 
-            LaunchedEffect(key1 = dismissState.currentValue) {
-                if (dismissState.currentValue == SwipeToDismissBoxValue.EndToStart) {
+            LaunchedEffect(key1 = swipeState.currentValue) {
+                if (swipeState.currentValue == SwipeToDismissBoxValue.EndToStart) {
                     onDeleteTask(task, Action.Delete)
                 }
             }
 
+            val degrees = if (swipeState.targetValue == SwipeToDismissBoxValue.Settled) {
+                0f
+            } else {
+                -45f
+            }
+
             SwipeToDismissBox(
-                state = dismissState,
-                backgroundContent = {
-                    val degrees = if (dismissState.targetValue == SwipeToDismissBoxValue.Settled) {
-                        0f
-                    } else {
-                        -45f
-                    }
-                    RedBackground(degrees = degrees)
-                },
+                state = swipeState,
+                backgroundContent = { RedBackground(degrees = degrees) },
+                enableDismissFromStartToEnd = false
             ) {
                 ListTaskItem(toDoTask = task, navigateToTaskScreen = navigateToTaskScreen)
             }
@@ -137,7 +135,7 @@ fun RedBackground(degrees: Float) {
                 .rotate(degrees = angle)
                 .padding(horizontal = LargestPadding),
             imageVector = Icons.Filled.Delete,
-            contentDescription = stringResource(id = R.string.delete_task),
+            contentDescription = stringResource(id = R.string.delete_task_description),
             tint = Color.White
         )
     }
