@@ -100,6 +100,12 @@ fun DisplayTasks(
                 }
             }
 
+            if (swipeState.currentValue != SwipeToDismissBoxValue.Settled) {
+                LaunchedEffect(Unit) {
+                    swipeState.reset()
+                }
+            }
+
             val degrees = if (swipeState.targetValue == SwipeToDismissBoxValue.Settled) {
                 0f
             } else {
